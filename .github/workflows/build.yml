@@ -36,9 +36,19 @@ jobs:
         if: steps.changed-files.outputs.any_changed == 'true' && contains(steps.changed-files.outputs.all_changed_files, 'apps/cart')
         uses: SonarSource/sonarqube-scan-action@v6
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_APPS_CART }}
+        with:
+          projectBaseDir: apps/cart
+          args: >
+            -Dsonar.organization=joe-tingsanchali-sonarsource
+            -Dsonar.projectKey=joe-tingsanchali-sonarsource_nx-examples_apps_cart
       - name: SonarQube Scan - APPS PRODUCTS
         if: steps.changed-files.outputs.any_changed == 'true' && contains(steps.changed-files.outputs.all_changed_files, 'apps/products')
         uses: SonarSource/sonarqube-scan-action@v6
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_APPS_PRODUCTS }}
+        with:
+          projectBaseDir: apps/cart
+          args: >
+            -Dsonar.organization=joe-tingsanchali-sonarsource
+            -Dsonar.projectKey=joe-tingsanchali-sonarsource_nx-examples_apps_products
