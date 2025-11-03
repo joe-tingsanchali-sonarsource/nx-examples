@@ -97,6 +97,12 @@
     },
     "e2e-ci--**/*": {
       "dependsOn": ["^products:build"]
+    },
+    "sonar": {
+      "dependsOn": ["^test", "test"]
+    },
+    "test": {
+      "dependsOn": ["^test"]
     }
   },
   "namedInputs": {

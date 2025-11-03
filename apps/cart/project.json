@@ -3,6 +3,8 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/cart/src",
   "projectType": "application",
+  "tags": ["type:app", "scope:cart"],
+  "implicitDependencies": ["shared-assets", "shared-styles"],
   "generators": {},
   "targets": {
     "build": {
@@ -95,8 +97,20 @@
           }
         ]
       }
+    },
+    "sonar": {
+      "executor": "@koliveira15/nx-sonarqube:scan",
+      "options": {
+        "hostUrl": "https://sonarcloud.io",
+        "organization": "joe-tingsanchali-sonarsource",
+        "projectKey": "joe-tingsanchali-sonarsource_nx-examples_apps_cart",
+        "skipImplicitDeps": true,
+        "qualityGate": false,
+        "token": "${SONAR_TOKEN}",
+        "testInclusions": "**/*.spec.ts,**/*.spec.tsx,**/*.test.ts,**/*.test.tsx",
+        "exclusions": "**/*.spec.ts,**/*.spec.tsx,**/*.test.ts,**/*.test.tsx,**/test-setup.ts",
+        "lcovReportPaths": "coverage/apps/cart/lcov.info"
+      }
     }
-  },
-  "tags": ["type:app", "scope:cart"],
-  "implicitDependencies": ["shared-assets", "shared-styles"]
+  }
 }

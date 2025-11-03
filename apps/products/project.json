@@ -99,6 +99,13 @@
           }
         ]
       }
+    },
+    "sonar": {
+      "executor": "@koliveira15/nx-sonarqube:scan",
+      "options": {
+        "hostUrl": "http://localhost:2550",
+        "projectKey": "nx-examples_products"
+      }
     }
   }
 }

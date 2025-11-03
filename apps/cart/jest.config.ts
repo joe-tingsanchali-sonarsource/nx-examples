@@ -5,8 +5,10 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'html'],
   coverageDirectory: '../../coverage/apps/cart',
+  coverageReporters: ['lcov', 'text', 'html'],
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {},
   displayName: 'cart',
   preset: '../../jest.preset.js',
+  collectCoverage: true
 };
