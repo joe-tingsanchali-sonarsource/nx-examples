@@ -4,43 +4,19 @@
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
-    "@nx/angular:library": {
-      "unitTestRunner": "jest"
-    },
+    "@nx/angular:library": { "unitTestRunner": "jest" },
     "@nx/angular": {
-      "convert-tslint-to-eslint": {
-        "removeTSLintIfNoMoreTSLintTargets": true
-      },
-      "component": {
-        "type": "component"
-      },
-      "directive": {
-        "type": "directive"
-      },
-      "service": {
-        "type": "service"
-      },
-      "scam": {
-        "type": "component"
-      },
-      "scam-directive": {
-        "type": "directive"
-      },
-      "guard": {
-        "typeSeparator": "."
-      },
-      "interceptor": {
-        "typeSeparator": "."
-      },
-      "module": {
-        "typeSeparator": "."
-      },
-      "pipe": {
-        "typeSeparator": "."
-      },
-      "resolver": {
-        "typeSeparator": "."
-      }
+      "convert-tslint-to-eslint": { "removeTSLintIfNoMoreTSLintTargets": true },
+      "component": { "type": "component" },
+      "directive": { "type": "directive" },
+      "service": { "type": "service" },
+      "scam": { "type": "component" },
+      "scam-directive": { "type": "directive" },
+      "guard": { "typeSeparator": "." },
+      "interceptor": { "typeSeparator": "." },
+      "module": { "typeSeparator": "." },
+      "pipe": { "typeSeparator": "." },
+      "resolver": { "typeSeparator": "." }
     },
     "@nx/react": {
       "application": {
@@ -49,38 +25,17 @@
         "linter": "eslint",
         "bundler": "webpack"
       },
-      "component": {
-        "style": "css"
-      },
-      "library": {
-        "style": "css",
-        "linter": "eslint"
-      }
+      "component": { "style": "css" },
+      "library": { "style": "css", "linter": "eslint" }
     },
-    "@schematics/angular:component": {
-      "type": "component"
-    },
-    "@schematics/angular:directive": {
-      "type": "directive"
-    },
-    "@schematics/angular:service": {
-      "type": "service"
-    },
-    "@schematics/angular:guard": {
-      "typeSeparator": "."
-    },
-    "@schematics/angular:interceptor": {
-      "typeSeparator": "."
-    },
-    "@schematics/angular:module": {
-      "typeSeparator": "."
-    },
-    "@schematics/angular:pipe": {
-      "typeSeparator": "."
-    },
-    "@schematics/angular:resolver": {
-      "typeSeparator": "."
-    }
+    "@schematics/angular:component": { "type": "component" },
+    "@schematics/angular:directive": { "type": "directive" },
+    "@schematics/angular:service": { "type": "service" },
+    "@schematics/angular:guard": { "typeSeparator": "." },
+    "@schematics/angular:interceptor": { "typeSeparator": "." },
+    "@schematics/angular:module": { "typeSeparator": "." },
+    "@schematics/angular:pipe": { "typeSeparator": "." },
+    "@schematics/angular:resolver": { "typeSeparator": "." }
   },
   "defaultProject": "products",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
@@ -95,9 +50,7 @@
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
     },
-    "e2e-ci--**/*": {
-      "dependsOn": ["^products:build"]
-    }
+    "e2e-ci--**/*": { "dependsOn": ["^products:build"] }
   },
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
@@ -118,12 +71,7 @@
   "nxCloudAccessToken": "MTE1ZmYwZmItNGQxNS00NWMyLWExY2YtYWIyODkxZTdkOWNkfHJlYWQ=",
   "parallel": 1,
   "plugins": [
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
-    },
+    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
     {
       "plugin": "@nx/cypress/plugin",
       "options": {
@@ -132,12 +80,8 @@
         "componentTestingTargetName": "component-test"
       }
     },
-    {
-      "plugin": "@nx/jest/plugin",
-      "options": {
-        "targetName": "test"
-      }
-    }
+    { "plugin": "@nx/jest/plugin", "options": { "targetName": "test" } }
   ],
-  "defaultBase": "master"
+  "defaultBase": "master",
+  "nxCloudId": "69081972a923b38e27dc1616"
 }
