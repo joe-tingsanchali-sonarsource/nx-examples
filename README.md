@@ -16,7 +16,7 @@ This project was generated using [Nx](https://nx.dev).
 
 ## Adding capabilities to your workspace
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+Nx supports many plugins that add capabilities for developing different types of applications and tools.
 
 These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
 
